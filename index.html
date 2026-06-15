@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perpustakaan DOMUS ISAACI</title>
+
+<style>
+body{
+    margin:0;
+    background:#07111f;
+    color:#f5f1e6;
+    font-family:Georgia, serif;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    color:#d4af37;
+}
+
+.card{
+    background:#0f1d35;
+    padding:25px;
+    border-radius:12px;
+    margin:20px 0;
+}
+
+.qr{
+    text-align:center;
+}
+
+.qr img{
+    width:280px;
+    max-width:100%;
+    border-radius:10px;
+}
+
+.button{
+    display:block;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    padding:14px;
+    text-align:center;
+    border-radius:8px;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.note{
+    font-size:15px;
+    line-height:1.7;
+}
+
+.footer{
+    text-align:center;
+    opacity:.7;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>📚 Perpustakaan DOMUS ISAACI</h1>
+
+<div class="card">
+<p class="note">
+Selamat datang di Ruang Perpustakaan.
+Di dalam ruang ini tersimpan jurnal, artefak, penjelajahan,
+dan materi yang tidak dipublikasikan secara umum.
+</p>
+</div>
+
+<div class="card qr">
+<h2>Pembukaan Akses</h2>
+
+<img src="https://i.ibb.co.com/PGXNgwRn/Kode-QRIS-NORMAN-CANDHI-SUWITO-Pekerja-Konstruksi-1.jpg">
+
+<p>
+Kontribusi Akses Perpustakaan
+<br><br>
+<b>Rp 50.000</b>
+</p>
+
+<p>
+Setelah transfer, kirim bukti pembayaran melalui WhatsApp.
+</p>
+
+<a class="button"
+href="https://wa.me/6283183329222">
+Kirim Bukti Transfer
+</a>
+
+<a class="button"
+href="#"
+onclick="document.getElementById('loginBox').style.display='block';">
+🔑 Masuk Perpustakaan
+</a>
+
+<div id="loginBox"
+style="
+display:none;
+margin-top:20px;
+padding:20px;
+background:#1a2744;
+border-radius:10px;
+">
+
+<h3>Masukkan Password</h3>
+
+<p>
+Gunakan kata kunci yang diberikan melalui WhatsApp setelah konfirmasi pembayaran.
+</p>
+
+<input
+type="password"
+id="libraryPass"
+placeholder="Masukkan password"
+style="
+padding:10px;
+width:80%;
+max-width:300px;
+border-radius:6px;
+border:none;
+">
+
+<br><br>
+
+<button class="button"
+onclick="cekPassword()">
+Masuk
+</button>
+
+<p id="pesanError"></p>
+
+</div>
+</div>
+
+<div class="card">
+
+<h2>🔑 Cara Masuk</h2>
+
+<ol class="note">
+<li>Lakukan pembayaran melalui QRIS.</li>
+<li>Kirim bukti transfer.</li>
+<li>Admin akan memberikan Kata Kunci Perpustakaan.</li>
+<li>Masukkan kata kunci pada halaman akses.</li>
+<li>Nikmati seluruh penjelajahan yang tersedia.</li>
+</ol>
+
+</div>
+
+<div class="card">
+
+<h2>🏠 Tentang Perpustakaan</h2>
+
+<p class="note">
+Perpustakaan DOMUS bukan sekadar kumpulan ebook.
+Ia adalah ruang penjelajahan yang terus bertumbuh.
+
+Setiap bulan akan ditambahkan jurnal, artefak,
+penelitian baru, dan ruang-ruang yang belum dibuka
+untuk publik.
+</p>
+
+</div>
+
+<div class="footer">
+DOMUS ISAACI © 2026
+</div>
+
+</div>
+
+<script>
+
+function cekPassword(){
+
+var pass =
+document.getElementById("libraryPass").value;
+
+/* GANTI PASSWORD INI */
+
+if(pass === "DOMUS2026"){
+
+window.location.href =
+"https://ebook.norman-sandhi.workers.dev/";
+
+}else{
+
+document.getElementById("pesanError").innerHTML =
+"Password tidak valid.";
+
+}
+
+}
+
+</script>
+</body>
+</html>
